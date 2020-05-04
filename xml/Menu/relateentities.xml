@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<menu>
+  <item>
+    <path>civicrm/relateentities/list</path>
+    <title>Related Entities</title>
+    <page_callback>CRM_RelateEntities_Page_Tab</page_callback>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/ajax/relatedentities</path>
+    <page_callback>CRM_RelateEntities_Utils::getList</page_callback>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+     <path>civicrm/relatedentities/add</path>
+     <title>New Related Entity</title>
+     <page_callback>CRM_RelateEntities_Page_Tab</page_callback>
+     <path_arguments>action=add</path_arguments>
+     <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>

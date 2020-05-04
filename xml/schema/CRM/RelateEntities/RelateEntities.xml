@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/RelateEntities</base>
+  <class>RelateEntities</class>
+  <name>civicrm_relate_entities</name>
+  <comment>Related entity</comment>
+  <add>1.0</add>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique Related Entity ID</comment>
+    <add>1.0</add>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+  <field>
+    <name>entity_table_a</name>
+    <title>Entity Table A</title>
+    <type>varchar</type>
+    <length>64</length>
+    <required>true</required>
+    <comment>May contain civicrm_financial_item, civicrm_contribution, civicrm_financial_trxn, civicrm_grant, etc</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>entity_id_a</name>
+    <title>Entity Id A</title>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>entry in table</comment>
+    <add>1.0</add>
+  </field>
+  <dynamicForeignKey>
+    <idColumn>entity_id_a</idColumn>
+    <typeColumn>entity_table_a</typeColumn>
+    <add>1.0</add>
+  </dynamicForeignKey>
+  <field>
+    <name>entity_table_b</name>
+    <title>Entity Table b</title>
+    <type>varchar</type>
+    <length>64</length>
+    <required>true</required>
+    <comment>May contain civicrm_financial_item, civicrm_contribution, civicrm_financial_trxn, civicrm_grant, etc</comment>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>entity_id_b</name>
+    <title>Entity Id B</title>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>entry in table</comment>
+    <add>1.0</add>
+  </field>
+  <dynamicForeignKey>
+    <idColumn>entity_id_b</idColumn>
+    <typeColumn>entity_table_b</typeColumn>
+    <add>1.0</add>
+  </dynamicForeignKey>
+  <field>
+    <name>relationship_type_id</name>
+    <type>int unsigned</type>
+    <title>Relationship Type</title>
+    <required>true</required>
+    <comment>id of the relationship</comment>
+    <add>1.0</add>
+    <html>
+      <type>Select</type>
+    </html>
+  </field>
+  <foreignKey>
+    <name>relationship_type_id</name>
+    <table>civicrm_relationship_type</table>
+    <key>id</key>
+    <add>1.0</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <field>
+    <name>is_active</name>
+    <type>boolean</type>
+    <title>Relationship Is Active</title>
+    <default>1</default>
+    <comment>is the relationship active ?</comment>
+    <add>1.1</add>
+    <html>
+      <type>CheckBox</type>
+    </html>
+  </field>
+  <field>
+    <name>created_date</name>
+    <title>RelateEntities Created Date</title>
+    <type>timestamp</type>
+    <comment>When was the entry was created.</comment>
+    <required>false</required>
+    <export>true</export>
+    <default>CURRENT_TIMESTAMP</default>
+    <add>1.0</add>
+  </field>
+  <field>
+    <name>modified_date</name>
+    <title>RelateEntities Modified Date</title>
+    <type>timestamp</type>
+    <comment>When was the entry was modified.</comment>
+    <required>false</required>
+    <export>true</export>
+    <default>CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP</default>
+    <add>1.0</add>
+  </field>
+</table>
