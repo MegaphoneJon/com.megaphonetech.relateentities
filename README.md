@@ -2,7 +2,7 @@
 
 ![relate-entity.png screenshot](/images/relate-entity.png)
 
-This extension allows CiviCRM's back end users to define a relationship between a contact and a financial type. This relationship is referred to as a *Related Entity*. This is helpful for linking individuals with endowments or scholarships.
+This extension allows CiviCRM's back end users to create relationships between contacts and non-contact entities. This relationship is referred to as a *Related Entity*. This is helpful for linking individuals with, for example, endowments or scholarships. Only *contact* to *financial type* relationships are present at this time but support can be added for other entities.
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
@@ -41,7 +41,7 @@ Upon installation, visit any contact (regardless of the contact type), then find
 
 ![contact-new-tab.png screenshot](/images/contact-new-tab.png)
 
-The following screen will list previously defined *entity relations*. To add a new one, simply click on the **New Entity relation** button. You will then be presented with a new screen where you can define a relationship between the contact and a financial type (referred to as *Entity B*).
+The following screen will list previously defined *entity relations*. To add a new one, simply click on the **New Entity relation** button. You will then be presented with a new screen where you can define a relationship between the contact and a non-contact entity (referred to as *Entity B*).
 
 ![relate-entity.png screenshot](/images/relate-entity.png)
 

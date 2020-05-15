@@ -2,7 +2,7 @@
 <extension key="com.megaphonetech.relateentities" type="module">
   <file>relateentities</file>
   <name>Relate Entities</name>
-  <description>Define relationships between contacts and financial types.</description>
+  <description>Define relationships between contacts and non-contact entities.</description>
   <license>AGPL-3.0</license>
   <maintainer>
     <author>Jon Goldberg</author>
