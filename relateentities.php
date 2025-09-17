@@ -169,7 +169,7 @@ function relateentities_civicrm_tabset($tabsetName, &$tabs, $context) {
 function relateentities_civicrm_pageRun(&$page) {
   if (is_a($page, 'CRM_Financial_Page_FinancialType')) {
     $page->assign('entityTable', 'FinancialType');
-    $financialTypes = $page->get_template_vars('rows');
+    $financialTypes = $page->getTemplateVars('rows');
     foreach ($financialTypes as &$financialType) {
       $url = CRM_Utils_System::url(
         'civicrm/relateentities/list',
